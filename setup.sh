@@ -35,7 +35,7 @@ cmake ../
 make
 cp libFNA3D.so.0.*.* $LIB_DIR/libFNA3D.so.0
 
-# Build 
+# Build FAudio
 cd $ROOT/FAudio
 git checkout 2cc9baafc7bf9ae524a61e9f8250883500a9820a
 mkdir build
