@@ -39,5 +39,5 @@ chmod +x $LIB_DIR/*
 
 # Copy the scripts in
 cd $ROOT
-chmod +x run.sh run_server.sh
-cp run.sh run_server.sh $EXE_DIR
+chmod +x scripts/*
+cp scripts/* $EXE_DIR

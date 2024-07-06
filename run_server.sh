@@ -1,1 +1,3 @@
-LD_LIBRARY_PATH="$(pwd)/lib-arm64" mono TerrariaServer.exe
+#!/usr/bin/env bash
+cd terraria/data/noarch/game
+./server.sh
