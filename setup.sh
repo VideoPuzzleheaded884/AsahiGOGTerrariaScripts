@@ -18,6 +18,7 @@ wget https://codeload.github.com/libsdl-org/SDL/zip/refs/tags/release-2.28.4
 unzip release-2.28.4
 rm release-2.28.4
 git clone https://github.com/FNA-XNA/FNA3D.git --recurse-submodules
+git clone https://github.com/FNA-XNA/FAudio
 
 # Build SDL2
 cd SDL-release-2.28.4
@@ -33,6 +34,15 @@ cd build
 cmake ../
 make
 cp libFNA3D.so.0.*.* $LIB_DIR/libFNA3D.so.0
+
+# Build 
+cd $ROOT/FAudio
+git checkout 2cc9baafc7bf9ae524a61e9f8250883500a9820a
+mkdir build
+cd build
+cmake ../
+make
+cp libFAudio.so.0 $LIB_DIR/libFAudio.so.0
 
 # Make sure the libraries are executable
 chmod +x $LIB_DIR/*
